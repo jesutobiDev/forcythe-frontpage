@@ -7,7 +7,7 @@ import { FiYoutube } from "react-icons/fi";
 const Footer = () => {
   return (
     <footer className="divide-y divide-accent px-5 md:px-10 lg:px-12 xl:px-32 pb-12 pt-40 bg-gradient-to-b from-accent-dark via-accent-dark to-accent-dark">
-      <div className="flex gap-16 pb-10 flex-wrap">
+      <div className="flex gap-16 pb-10 flex-wrap lg:flex-nowrap  ">
         <form className="md:w-full lg:w-5/12 space-y-7">
         <div className="border border-white flex overflow-hidden rounded-full h-12 md:w-3/4">
           <input type="text" className="bg-transparent outline-none flex-1  pl-4 text-sm" placeholder="Your Email Address" />
@@ -31,7 +31,7 @@ const Footer = () => {
             
           </div>
         </div>
-        <div className="space-y-7 md:flex-1 lg:w-2/12">
+        <div className="space-y-7 md:w-auto lg:w-2/12">
           <h3 className="text-2xl font-semibold">Company</h3>
           <div className="flex flex-col gap-3 text-accent-light font-semibold">
             <Link to="">About</Link>
