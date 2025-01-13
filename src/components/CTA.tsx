@@ -1,7 +1,7 @@
 import Button from "./Button";
 const CTA = () => {
   return (
-    <div className="px-[4rem] flex flex-col items-center gap-7">
+    <div className="px-[4rem] flex flex-col items-center gap-7 bg-gradient-to-b from-primary to-accent-dark">
       <h2 className="text-[2.5rem] w-4/6 mx-auto text-center">
         <span className="text-accent">Ready to Scale?</span>
         <br />

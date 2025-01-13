@@ -38,13 +38,13 @@ const achievementList = [
 
 const Advantages = () => {
   return (
-    <div className="px-[4rem] space-y-20">
+    <div className="px-[4rem] space-y-20 bg-gradient-to-b from-primary via-accent-dark to-primary">
       <motion.h2 className="text-[2.5rem] text-accent-light mx-auto w-5/6">
         <RevealText text="Your best call for B2B/B2C product innovation" />
       </motion.h2>
       <div className="grid grid-cols-3 gap-7">
         {advantageList.map((advantage, index) => (
-          <div key={index} className="bg-purple-400 rounded-xl p-7 h-fit space-y-3">
+          <div key={index} className="bg-primary rounded-xl p-7 h-fit space-y-3">
             <div className="bg-[#5d91c3] w-12 h-12 rounded-lg flex items-center justify-center">
               <img
                 src="https://forcythe.com/images/layers-three.svg"
@@ -57,8 +57,8 @@ const Advantages = () => {
           </div>
         ))}
       </div>
-      <div className="w-[800px] rounded-t-full h-[400px] mx-auto border-t-2 border-accent-light flex flex-col items-center justify-end gap-16">
-        <motion.h3 className="text-3xl w-2/3 text-center font-medium">
+      <div className="w-[880px] rounded-t-full h-[440px] mx-auto border-t-2 border-accent-light flex flex-col items-center justify-end gap-16">
+        <motion.h3 className="text-3xl w-3/5 text-center font-medium">
           <RevealText text="We build solutions that help " />
           <span className="text-accent">
             <RevealText text="businesses" delay={1.2} />
@@ -68,7 +68,7 @@ const Advantages = () => {
             <RevealText text="scale" delay={2.5} />
           </span>
         </motion.h3>
-        <div className="flex gap-5">
+        <div className="flex gap-10">
           {achievementList.map((achievement, index) => (
             <Achievement key={index} achievement={achievement} />
           ))}

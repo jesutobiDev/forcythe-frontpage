@@ -8,9 +8,9 @@ interface LayoutProps{
 
 const Layout:React.FC<LayoutProps> = ({children}) => {
   return (
-    <div className="bg-primary text-white space-y-20">
+    <div className="bg-primary text-white">
         <Navbar/>
-        <main className="pt-16 space-y-28 bg-[url('/src/assets/hero-background.svg')] bg-no-repeat">
+        <main className="pt-16 space-y-40 bg-[url('/src/assets/hero-background.svg')] bg-no-repeat">
             {children}
         </main>
         <Footer/>

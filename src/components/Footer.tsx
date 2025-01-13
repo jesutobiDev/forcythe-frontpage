@@ -6,7 +6,7 @@ import { FiYoutube } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="divide-y divide-accent px-[4rem] pb-12 pt-20">
+    <footer className="divide-y divide-accent px-[4rem] pb-12 pt-40 bg-gradient-to-b from-accent-dark via-accent-dark to-accent-dark">
       <div className="flex gap-16 pb-10">
         <form className="w-5/12 space-y-7">
         <div className="border border-white flex overflow-hidden rounded-full h-12">
