@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Lexend", serif;
+}
+
+@layer components {
+    .btn-dotted {
+      @apply px-4 py-2 rounded-md bg-white text-black border border-gray-400 border-dotted hover:bg-gray-100 focus:ring focus:outline-none;
+      box-shadow: 0 0 0 3px white;
+    }
+  }

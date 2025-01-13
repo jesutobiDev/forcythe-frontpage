@@ -1,0 +1,23 @@
+[
+    {
+        "thumbnail": "https://forcythe.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdhahjsrtn%2Fimage%2Fupload%2Fv1716992357%2FWill_AI_take_over_cc9401fe38.jpg&w=1920&q=75",
+        "author": "The Reformist",
+        "date": "2023-01-01",
+        "title": "Will AI take over Art?",
+        "slug": "will-ai-take-over-art"
+    },
+    {
+        "thumbnail": "https://forcythe.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdhahjsrtn%2Fimage%2Fupload%2Fv1716992003%2FCryptocurrency_vs_token_f8865950e7.jpg&w=1920&q=75",
+        "author": "The Reformist",
+        "date": "2023-02-15",
+        "title": "Cryptocurrency vs Tokens",
+        "slug": "cryptocurrency-vs-tokens"
+    },
+    {
+        "thumbnail": "https://forcythe.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdhahjsrtn%2Fimage%2Fupload%2Fv1716991585%2FCryptocurrency_and_crypto_assets_da92d172fc.jpg&w=1920&q=75",
+        "author": "The Reformist",
+        "date": "2023-03-10",
+        "title": "Cryptocurrency and Crypto asset",
+        "slug": "cryptocurrency-and-crypto-asset"
+    }
+]

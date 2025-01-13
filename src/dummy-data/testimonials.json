@@ -1,0 +1,52 @@
+[
+    {
+        "logo": "https://forcythe.com/images/starks.svg",
+        "organization": "Starks Associate",
+        "comment": "Partnering with Forcythe was like finding a hidden gem. Their genuine interest in our success was palpable, and the continuous support post-launch has been a testament to their commitment. They’ve become more than a service provider; they’re a trusted ally.",
+        "reviewer": {
+            "name": "John",
+            "image": "https://forcythe.com/images/john.svg",
+            "position": "Management"
+        }
+    },
+    {
+        "logo": "https://forcythe.com/images/ExecutivePros%20Logo.svg",
+        "organization": "Executive Pros",
+        "comment": "The team understood the assignment and delivered very well. One of the things that stood them out was how they took our concepts and turned it into visually appealing designs that caught the eyes of our clients and made increased web engagements. Kudos!",
+        "reviewer": {
+            "name": "Testimoonny",
+            "image": "https://forcythe.com/images/executive-pro-ceo.svg",
+            "position": "Co-founder"
+        }
+    },
+    {
+        "logo": "https://forcythe.com/images/stacai.svg",
+        "organization": "Stac AI",
+        "comment": "Forcythe is seriously amazing when it comes to coming up with new ideas. They took our rough ideas and turned them into something incredible online. Their team’s commitment to our vision was evident every step of the way.",
+        "reviewer": {
+            "name": "Edwin",
+            "image": "https://forcythe.com/images/edwin.svg",
+            "position": "Former CTO"
+        }
+    },
+    {
+        "logo": "https://forcythe.com/images/iwaria.svg",
+        "organization": "Iwaria",
+        "comment": "The moment we engaged Forcythe, it was clear they were in a league of their own. Their strategic approach to our project not only enhanced our online platform but also enriched our brand’s story, captivating our audience like never before.",
+        "reviewer": {
+            "name": "Iwaria",
+            "image": "https://forcythe.com/images/iwaria-founder.svg",
+            "position": "Founder"
+        }
+    },
+    {
+        "logo": "https://forcythe.com/images/Beaupreneur.svg",
+        "organization": "Beaupreneur",
+        "comment": "I’m beyond impressed with the dedication Forcythe showed. They didn’t just deliver—they educated us, involving us in the creative process. The result? A website that truly feels like ours and speaks directly to our customers’ hearts.",
+        "reviewer": {
+            "name": "Christiana",
+            "image": "https://forcythe.com/images/christina.svg",
+            "position": "Founder"
+        }
+    }
+]
