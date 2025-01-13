@@ -5,6 +5,8 @@ import develop_img from "../assets/images/process/develop.svg";
 import launch_img from "../assets/images/process/launch.svg";
 import Button from "./Button";
 import { BiSolidUpArrow } from "react-icons/bi";
+import RevealText from "../utilities/RevealText";
+import { motion } from "framer-motion";
 
 const Process = () => {
   const [currentStep, setCurrentStep] = useState("Idea");
@@ -43,15 +45,25 @@ const Process = () => {
   const activeStep = steps.find((step) => step.name === currentStep);
 
   return (
-    <div className="px-12">
-      <h2 className="text-left text-[2.5rem] w-4/6">
-        From <span className="text-accent">Spark</span> to{" "}
-        <span className="text-accent">Spotlight:</span> we take you every step
-        of the way to success.
-      </h2>
+    <div className="px-[4rem]">
+      <motion.h2
+        initial="hidden"
+        whileInView="visible"
+        className="text-left text-[2.5rem] w-4/6"
+      >
+        <RevealText text="From " />
+        <span className="text-accent">
+          <RevealText text="Spark" delay={0.3} />
+        </span>{" "}
+        <RevealText text="to" delay={0.5} />
+        {" "}
+        <span className="text-accent">
+          <RevealText text="Spotlight" delay={0.7} />
+        </span>
+        <RevealText delay={1} text=" : we take you every step of the way to success." />
+      </motion.h2>
 
       <div className="flex mt-20 h-[400px] gap-20">
-        {/* Step Navigation */}
         <div className="space-y-10 w-1/2 flex flex-col justify-between">
           <div className="border-2 border-accent-light p-3 rounded-full flex gap-5 ">
             {steps.map((step) => (
@@ -68,25 +80,51 @@ const Process = () => {
               </button>
             ))}
           </div>
-            {
-              activeStep && (
-                <div className="text-left space-y-9">
-
-                <h3 className="text-[2rem] font-semibold">{activeStep.header}</h3>
-                <p className="mt-3 text-light-grey/70 text-lg">{activeStep.description}</p>
-              </div>
-              )
-            }
-            <Button>Book a Call <BiSolidUpArrow className="rotate-90" /></Button>
+          {activeStep && (
+            <motion.div
+              key={activeStep.name}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-left space-y-9"
+            >
+              <motion.h3
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+                className="text-[2rem] font-semibold"
+              >
+                <RevealText text={activeStep.header} staggerDelay={0.02} />
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+                className="mt-3 text-light-grey/70 text-lg"
+              >
+                <RevealText text={activeStep.description} staggerDelay={0.02} />
+              </motion.p>
+            </motion.div>
+          )}
+          <Button>
+            Book a Call <BiSolidUpArrow className="rotate-90" />
+          </Button>
         </div>
 
-        {/* Step Content */}
         <div className="w-1/2">
           {activeStep && (
-            <img
+            <motion.img
+              key={activeStep.name} 
               src={activeStep.image}
               alt={activeStep.name}
               className="mx-auto w-full h-full mb-5"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
             />
           )}
         </div>

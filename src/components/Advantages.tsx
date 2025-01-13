@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+import RevealText from "../utilities/RevealText";
+import { motion } from "framer-motion";
+
 const advantageList = [
   {
     name: "Experience",
@@ -13,30 +17,31 @@ const advantageList = [
   },
 ];
 
-const achievementList=[
+const achievementList = [
   {
-    name:"Clients",
-    value:50
+    name: "Clients",
+    value: 50,
   },
   {
-    name:"Projects",
-    value:120
+    name: "Projects",
+    value: 120,
   },
   {
-    name:"Team Leads",
-    value:10
+    name: "Team Leads",
+    value: 10,
   },
   {
-    name:"Glorious Years",
-    value:10
-  }
-]
+    name: "Glorious Years",
+    value: 10,
+  },
+];
+
 const Advantages = () => {
   return (
-    <div className="px-12 space-y-20">
-      <h2 className="text-[2.5rem] text-accent-light mx-auto w-5/6">
-        Your best call for B2B/B2C product innovation
-      </h2>
+    <div className="px-[4rem] space-y-20">
+      <motion.h2 className="text-[2.5rem] text-accent-light mx-auto w-5/6">
+        <RevealText text="Your best call for B2B/B2C product innovation" />
+      </motion.h2>
       <div className="grid grid-cols-3 gap-7">
         {advantageList.map((advantage, index) => (
           <div key={index} className="bg-purple-400 rounded-xl p-7 h-fit space-y-3">
@@ -48,23 +53,54 @@ const Advantages = () => {
               />
             </div>
             <h4 className="text-2xl font-semibold">{advantage.name}</h4>
-            <p className="text-lg opacity-70">{advantage.text}</p>
+            <motion.p className="text-lg opacity-70"><RevealText text={advantage.text} /></motion.p>
           </div>
         ))}
       </div>
       <div className="w-[800px] rounded-t-full h-[400px] mx-auto border-t-2 border-accent-light flex flex-col items-center justify-end gap-16">
-        <h3 className="text-3xl w-2/3 text-center font-medium">We build solutions that help <span className="text-accent">businesses</span> of all sizes to <span className="text-accent">scale</span></h3>
+        <motion.h3 className="text-3xl w-2/3 text-center font-medium">
+          <RevealText text="We build solutions that help " />
+          <span className="text-accent">
+            <RevealText text="businesses" delay={1.2} />
+          </span>
+          <RevealText text=" of all sizes to " delay={1.7} />
+          <span className="text-accent">
+            <RevealText text="scale" delay={2.5} />
+          </span>
+        </motion.h3>
         <div className="flex gap-5">
-          {
-            achievementList.map((achievement, index) =>(
-              <div className="" key={index}>
-                <h4 className="text-accent text-5xl font-medium">{achievement.value}+</h4>
-                <p className="text-lg mt-[2px]">{achievement.name}</p>
-              </div>
-            ))
-          }
+          {achievementList.map((achievement, index) => (
+            <Achievement key={index} achievement={achievement} />
+          ))}
         </div>
       </div>
+    </div>
+  );
+};
+
+const Achievement = ({ achievement }: { achievement: { name: string; value: number } }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let isMounted = true;
+    const interval = setInterval(() => {
+      if (count < achievement.value && isMounted) {
+        setCount((prev) => Math.min(prev + 1, achievement.value));
+      }
+    }, 10);
+
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+    };
+  }, [count, achievement.value]);
+
+  return (
+    <div className="">
+      <motion.h4 className="text-accent text-5xl font-medium">
+        {count}+
+      </motion.h4>
+      <p className="text-lg mt-[2px]">{achievement.name}</p>
     </div>
   );
 };

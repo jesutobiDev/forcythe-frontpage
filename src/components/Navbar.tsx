@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 w-full h-24 bg-transparent backdrop-blur-lg flex gap-20 items-center px-12 justify-between shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full h-24 bg-transparent backdrop-blur-lg flex gap-20 items-center px-[4rem] justify-between shadow-md z-50">
       {/* Logo */}
       <Link to="/">
         <img src={logo} alt="logo" className="h-10" />

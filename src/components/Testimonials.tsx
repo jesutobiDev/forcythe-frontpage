@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
 import testimonialsList from "../dummy-data/testimonials.json";
-import { useState } from "react";
 import TestimonialCard from "./CardComponents/TestimonialCard";
+import RevealText from "../utilities/RevealText";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   const [selectedTestimonialIndex, setSelectedTestimonialIndex] = useState(0);
@@ -22,12 +24,34 @@ const Testimonials = () => {
     }
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedTestimonialIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % testimonialsList.length;
+        return nextIndex;
+      });
+    }, 20000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="px-12">
-      <h2 className="text-center text-[2.5rem] w-5/6 mx-auto">
-        Discover the <span className="text-accent">transformative stories</span>{" "}
-        of startups that scaled new heights with us
-      </h2>
+    <div className="px-[4rem]">
+      <motion.h2
+        initial="hidden"
+        whileInView="visible"
+        className="text-center text-[2.5rem] w-5/6 mx-auto"
+      >
+        <RevealText text="Discover the" />{" "}
+        <span className="text-accent">
+          <RevealText
+            text="transformative stories"
+            delay={0.7}
+            className="inline-block"
+          />
+        </span>{" "}
+        <RevealText text="of startups that scaled new heights with us" delay={2} />{" "}
+      </motion.h2>
       <div className="flex justify-center mt-8 w-full rounded-full border border-accent overflow-hidden h-16">
         {testimonialsList.map((testimonial, index) => (
           <button
