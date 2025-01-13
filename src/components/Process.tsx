@@ -45,11 +45,11 @@ const Process = () => {
   const activeStep = steps.find((step) => step.name === currentStep);
 
   return (
-    <div className="px-[4rem]">
+    <div className="px-5 md:px-10 lg:px-12 xl:px-32">
       <motion.h2
         initial="hidden"
         whileInView="visible"
-        className="text-left text-[2.5rem] w-4/6"
+        className="text-left text-3xl md:text-4xl lg:text-[2.5rem] lg:w-4/6"
       >
         <RevealText text="From " />
         <span className="text-accent">
@@ -63,9 +63,9 @@ const Process = () => {
         <RevealText delay={1} text=" : we take you every step of the way to success." />
       </motion.h2>
 
-      <div className="flex mt-20 h-[400px] gap-20">
-        <div className="space-y-10 w-1/2 flex flex-col justify-between">
-          <div className="border-2 border-accent-light p-3 rounded-full flex gap-5 ">
+      <div className="flex flex-col md:flex-row mt-10 md:mt-20 h-auto md:h-[400px] gap-20">
+        <div className="space-y-10 w-full md:w-1/2 flex flex-col justify-between">
+          <div className="border-2 border-accent-light p-3 rounded-full flex gap-2 ">
             {steps.map((step) => (
               <button
                 key={step.name}
@@ -114,13 +114,13 @@ const Process = () => {
           </Button>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           {activeStep && (
             <motion.img
               key={activeStep.name} 
               src={activeStep.image}
               alt={activeStep.name}
-              className="mx-auto w-full h-full mb-5"
+              className="mx-auto mw-full h-full mb-5"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

@@ -6,10 +6,10 @@ import { FiYoutube } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="divide-y divide-accent px-[4rem] pb-12 pt-40 bg-gradient-to-b from-accent-dark via-accent-dark to-accent-dark">
-      <div className="flex gap-16 pb-10">
-        <form className="w-5/12 space-y-7">
-        <div className="border border-white flex overflow-hidden rounded-full h-12">
+    <footer className="divide-y divide-accent px-5 md:px-10 lg:px-12 xl:px-32 pb-12 pt-40 bg-gradient-to-b from-accent-dark via-accent-dark to-accent-dark">
+      <div className="flex gap-16 pb-10 flex-wrap">
+        <form className="md:w-full lg:w-5/12 space-y-7">
+        <div className="border border-white flex overflow-hidden rounded-full h-12 md:w-3/4">
           <input type="text" className="bg-transparent outline-none flex-1  pl-4 text-sm" placeholder="Your Email Address" />
           <button type="submit" className="px-5 bg-white text-primary text-sm font-semibold transition-all duration-300 ease-in-out hover:bg-[#064386] hover:text-white">Subscribe</button>
         </div>
@@ -18,7 +18,7 @@ const Footer = () => {
           <label htmlFor="agree" className="text-accent-light">I agree to receive other notifications from Forcythe</label>
         </div>
         </form>
-        <div className="space-y-7 w-5/12">
+        <div className="space-y-7 md:w-3/5 lg:w-5/12">
           <img src={logo} alt="logo" />
           <p className="leading-relaxed opacity-60 text-balance">We are the growth company for businesses looking to scale. We are dedicated to transforming businesses with bespoke digital solutions that drive growth.</p>
           <div className="flex gap-1 text-accent text-lg">
@@ -31,7 +31,7 @@ const Footer = () => {
             
           </div>
         </div>
-        <div className="space-y-7 w-2/12">
+        <div className="space-y-7 md:flex-1 lg:w-2/12">
           <h3 className="text-2xl font-semibold">Company</h3>
           <div className="flex flex-col gap-3 text-accent-light font-semibold">
             <Link to="">About</Link>

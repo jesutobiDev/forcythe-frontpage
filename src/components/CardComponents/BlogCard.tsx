@@ -10,7 +10,8 @@ interface BlogCardProps{
 }
 const BlogCard:React.FC<BlogCardProps> = ({thumbnail, author, date, title, slug}) => {
   return (
-    <Link to={`/blog/${slug}`} className="flex flex-col group overflow-hidden h-[430px] gap-8">
+    <Link to={`/blog/${slug}`} className="flex flex-col group overflow-hidden h-[430px] gap-8 hover:shadow hover:shadow-accent rounded-3xl">
+      {/* <div className="absolute w-full h-full border border-accent -z-10"></div> */}
       <div className="h-60 w-full rounded-3xl overflow-hidden">
       <img src={thumbnail} alt={`${title}`} className="object-cover w-full h-full group-hover:scale-105 transition-all duration-300 ease-in-out" />
       </div>

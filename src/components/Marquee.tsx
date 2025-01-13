@@ -16,7 +16,7 @@ const MarqueeSection = () => {
   return (
     <div className="space-y-10">
       <motion.h2
-        className="text-center text-[2.5rem] w-5/6 mx-auto"
+        className="text-center text-3xl md:text-4xl lg:text-[2.5rem] lg:w-5/6 mx-auto"
         initial="hidden"
         whileInView="visible"
       >

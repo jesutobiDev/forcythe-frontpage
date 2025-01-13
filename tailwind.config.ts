@@ -25,6 +25,13 @@ export default {
       boxShadow: {
         dotted: '0 0 0 3px rgba(0, 0, 0, 0.2)',
       },
+      backgroundImage:{
+        'conic-gradient': 'conic-gradient(from 90deg, #60a6e7, #0c2645, #1f3449)',
+      },
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+      },
+
     },
   },
   plugins: [],
